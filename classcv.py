@@ -1,11 +1,12 @@
-def tri_cv_parbac(liste,niveau,type):
+def tri_cv_parbac(liste:list,niveau:int,type:str):
     cvagarder=[]
+    type=type.lower()
     for i in range(len(liste)):
-        if liste[i][1]>=niveau and liste[i][2]==type:
+        if liste[i][1]>=niveau and liste[i][2].lower()==type:
             cvagarder.append(i)
     return cvagarder
 
-def affichage_bon_cv(liste_cv,index):
+def affichage_bon_cv(liste_cv:list,index:list):
     for i in range(len(index)):
         print(liste_cv[index[i]])
 
