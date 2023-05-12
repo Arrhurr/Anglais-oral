@@ -2,8 +2,10 @@ def tri_cv_parbac(liste:list,niveau:int,etude=None,nbvoulu=None):
     cvagarder=[]
     if type(nbvoulu)!=int:
         max=len(liste)+1
-    else:max=nbvoulu
-    if etude is not None: etude=etude.lower()
+    else:
+        max=nbvoulu
+    if etude is not None: 
+        etude=etude.lower()
     for i in range(len(liste)):
         if liste[i][1]>=niveau and liste[i][2].lower()==etude: 
             cvagarder.append(i)
